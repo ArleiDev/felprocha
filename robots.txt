@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://felprocha.vercel.app/sitemap.xml
