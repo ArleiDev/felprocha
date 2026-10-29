@@ -9,7 +9,6 @@ const hero = document.querySelector('.hero');
 const curve = document.getElementById('curve');
 const area = document.getElementById('area');
 const plane = document.getElementById('plane');
-const multEl = document.getElementById('mult');
 const W = 1440, H = 760;
 
 function flight() {
@@ -25,7 +24,6 @@ function flight() {
     area.setAttribute('d', `M0 ${H - 40} Q${cx} ${H - 40} ${x} ${y} Z`);
     const r = hero.getBoundingClientRect();
     plane.style.transform = `translate(${(x / W) * r.width - 20}px, ${(y / H) * r.height - 30}px) rotate(-${10 + p * 18}deg)`;
-    multEl.textContent = (1 + Math.pow(p, 1.6) * 9).toFixed(2) + 'x';
     if (p >= 1) {
       clearInterval(id);
       plane.style.opacity = 0;

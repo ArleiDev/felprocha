@@ -60,16 +60,17 @@ h1 span { display: block; color: var(--g); text-shadow: 0 0 30px rgba(182,255,26
 .hero-visual { position: relative; min-height: 540px; }
 .felp { position: absolute; left: 50%; top: 0; height: 100%; width: auto; max-width: none; transform: translateX(-46%); z-index: 1;
   -webkit-mask-image: linear-gradient(#000 70%, transparent 96%); mask-image: linear-gradient(#000 70%, transparent 96%); }
-.mult { position: absolute; left: -8%; bottom: 6%; z-index: 3; }
-.mult span { display: block; font-family: var(--fd); font-weight: 900; font-size: 44px; line-height: 1; color: var(--g); text-shadow: 0 0 30px rgba(182,255,26,.6); }
-.mult small { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+/* Print do jogo dentro de um celular */
+.shot { position: absolute; left: -15%; bottom: -5%; z-index: 3; width: 200px; padding: 7px; border-radius: 30px; background: #0c0d0f;
+  border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 70px rgba(0,0,0,.7), 0 0 50px rgba(182,255,26,.18); transform: rotate(-6deg); }
+.shot img { width: 100%; border-radius: 23px; }
 
 .notes { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
 .note { position: absolute; width: 230px; display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 12px;
   background: rgba(14,22,14,.82); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.08); box-shadow: 0 10px 30px rgba(0,0,0,.45);
   opacity: 0; transform: translateX(-30px); animation: noteIn .7s ease forwards; }
 .n1 { right: -16%; top: 16%; animation-delay: .6s; }
-.n2 { left: -16%; top: 40%; animation-delay: 1.2s; }
+.n2 { left: -6%; top: 2%; animation-delay: 1.2s; }
 .n3 { right: -24%; bottom: 20%; animation-delay: 1.8s; }
 @keyframes noteIn { to { opacity: 1; transform: none; } }
 .note strong { display: block; font-size: 11px; }
@@ -169,12 +170,12 @@ h1.reveal.in { transform: rotate(-3deg); }
   .ticks { width: fit-content; margin-inline: auto; text-align: left; }
   .micro { justify-content: center; }
   .hero-visual { height: 440px; min-height: 0; max-width: 460px; width: 100%; margin: 0 auto; }
+  .felp { transform: translateX(-34%); }
+  .shot { left: 0; bottom: 5%; width: 160px; padding: 5px; border-radius: 22px; }
+  .shot img { border-radius: 17px; }
 
   .note { width: 168px; }
-  .n1, .n3 { display: none; }
-  .n2 { left: 0; top: auto; bottom: 8%; }
-  .mult { left: 0; top: 4%; bottom: auto; }
-  .mult span { font-size: 38px; }
+  .n1, .n2, .n3 { display: none; }
   .flow { gap: 16px; }
   .step, .step:nth-child(2) { width: 100%; justify-self: stretch; }
   .step::after { display: none; }
